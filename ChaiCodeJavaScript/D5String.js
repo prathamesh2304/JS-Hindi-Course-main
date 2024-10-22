@@ -14,7 +14,7 @@ const stdName = new String('Prajwal')
     
     
     // 1. Write;
-    // 2. Youtube;
+    // 2. Youtube; 
     // 3. Setup
 
     
