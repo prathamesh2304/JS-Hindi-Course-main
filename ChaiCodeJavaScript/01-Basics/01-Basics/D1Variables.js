@@ -8,7 +8,7 @@ accountCity = "Chh sambhajinagar"
  
 accountName = "Aniket"
 accountEmail = "aniket9421@gmail.com"
-accountCity = "Jaipure"
+accountCity = "Jaipur"
  
 console.log(accountNumber);
 console.table([accountName,accountEmail,accountCity])
