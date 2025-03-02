@@ -5,7 +5,7 @@ TinderUser.id = "123abc"
 TinderUser.email = "samplegmail.com"
 TinderUser.isLoggedIn = false
 
-// console.log(TinderUser); // { id: '123abc', email: 'samplegmail.com', isLoggedIn: false }
+console.log(TinderUser); // { id: '123abc', email: 'samplegmail.com', isLoggedIn: false }
 
 const RegularObj = {
     email : "sample2gmail.com",
@@ -17,17 +17,17 @@ const RegularObj = {
         }
      }
 }
-// console.log(RegularObj.Username.fullname.firstname); // Prathamesh
+console.log(RegularObj.Username.fullname.firstname); // Prathamesh
 
 const obj1 = { 1 : "a", 2 : "b"}
 const obj2 = { 3 : "a", 4 : "b"}
 
-// const obj3 = Object.assign({}, obj1,obj2) // not prefred // { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+const obj3 = Object.assign({}, obj1,obj2) // not prefred // { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
 const obj3 = {...obj1,...obj2} // Prefered
 // { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
-// console.log(obj3); 
+console.log(obj3); 
 
     const user = [
     {
@@ -36,15 +36,26 @@ const obj3 = {...obj1,...obj2} // Prefered
     }
     ]
   
-// user[1].email // accessing the data came from database
+user[1].email // accessing the data came from database
 
-// console.log(TinderUser);
-// console.log(Object.keys(TinderUser)); // [ 'id', 'email', 'isLoggedIn' ]
-// console.log(Object.values(TinderUser)); // [ '123abc', 'samplegmail.com', false ]
-// console.log(Object.entries(TinderUser));
-//   [
-//  [ 'id', '123abc' ],
-//  [ 'email', 'samplegmail.com' ],
-//  [ 'isLoggedIn', false ]
-//   ]
-// console.log(TinderUser.hasOwnProperty('isLoggedIn')); // true
+console.log(TinderUser);
+console.log(Object.keys(TinderUser)); // [ 'id', 'email', 'isLoggedIn' ]
+console.log(Object.values(TinderUser)); // [ '123abc', 'samplegmail.com', false ]
+console.log(Object.entries(TinderUser));
+  [
+ [ 'id', '123abc' ],
+ [ 'email', 'samplegmail.com' ],
+ [ 'isLoggedIn', false ]
+  ]
+console.log(TinderUser.hasOwnProperty('isLoggedIn')); // true
+
+const Course = {
+    CourseName : "JavaScript",
+    Price : "999",
+    CourseInstructor : "Prathamesh"
+}
+
+const {CourseInstructor} = Course 
+const {CourseInstructor : Inst} = Course
+console.log(CourseInstructor);
+console.log(Inst);
