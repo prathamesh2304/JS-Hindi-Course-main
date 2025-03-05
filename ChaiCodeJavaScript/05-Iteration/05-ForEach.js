@@ -54,5 +54,5 @@ const newVariable = coding.forEach( (item) => {
     return item // this line removed undefined problem
 })
 
-// console.log(newVariable); 
+console.log(newVariable); 
 // Output :- undefined 
