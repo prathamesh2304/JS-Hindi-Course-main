@@ -28,20 +28,31 @@ programminglang.forEach( (item,index,arr) => {
 
 const coding = [
     {
-    langaugeName: "Java",
-    langaugeFile: "js"
+        langaugeName: "Java",
+        langaugeFile: "js"
     },
     {
-    langaugeName: "Python",
-    langaugeFile: "py"
+        langaugeName: "Python",
+        langaugeFile: "py"
     },
     {
-    langaugeName: "C++",
+        langaugeName: "C++",
     langaugeFile: "Cpp"
-    } ]
+} ]
 
 coding.forEach( (item) => {
     console.log(item.langaugeName);
     // Java Python C++
     
 })
+
+console.log("---ForEach Return---");
+
+const newVariable = coding.forEach( (item) => {
+    console.log(item.langaugeName);
+    // Java Python C++
+    return item // this line removed undefined problem
+})
+
+// console.log(newVariable); 
+// Output :- undefined 
