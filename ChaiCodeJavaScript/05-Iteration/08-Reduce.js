@@ -13,5 +13,27 @@ console.log(myManipulatedNum); // 6
 
 console.log(`------Simplified----------`);
 //  const myManipulatedNum = myNum.reduce( (accumulator,currrentValue) => accumulator+currrentValue,0)
- console.log(myManipulatedNum); // 6
+console.log(myManipulatedNum); // 6
+
+console.log(`------ShoppingCard Ex----------`);
+
+const shoppingCart = [
+    {
+        item: "Pant",
+        price: 700
+    },
+    {
+        item: "Shirt",
+        price: 500
+    },
+    {
+        item: "Jeans",
+        price: 800
+    },
+]
+
+const totalPrice = shoppingCart.reduce( (accumulator,item) => accumulator+item.price,0 )
+console.log(totalPrice); // 2000
+
+
  
