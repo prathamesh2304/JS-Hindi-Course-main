@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Prathamesh</title>
+</head>
+<body style="background-color: black;color: white;">
+  <div class="parent">
+    <div class="days">Monday</div>
+    <div class="days">Tuesday</div>
+    <div class="days">Wednesday</div>
+    <div class="days">Thursday</div>
+  </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent); // <div class="parent"><div> 
+
+    // console.log(parent.children); // it gives node of htmlcollection(4)
+    // console.log(parent.children[1]);// <div class="days">Tuesday</div>
+
+    for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i]);
+        // <div class="days">Monday</div>
+        // <div class="days">Tuesday</div>
+        // <div class="days">Wednesday</div>
+        // <div class="days">Thursday</div>
+    }
+
+    parent.children[1].style.color = 'orange'
+
+    // console.log(parent.firstElementChild);// <div class="days">Monday</div>
+    // console.log(parent.lastElementChild);// <div class="days">Thursday</div>
+    
+    const dayOne = document.querySelector('.days')
+    // console.log(dayOne); // <div class="days">Monday</div>
+
+    console.log(dayOne.parentElement);
+     // <div class="parent"></div>
+    console.log(dayOne.nextElementSibling);
+     // <div class="days">Tuesday</div>
+    
+    console.log("NODES: ",parent.childNodes);
+    // Nodelist(9) with 9 elements which consiste all spaces comments while writing div in html
+    
+    
+</script>
+</html>
