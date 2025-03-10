@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit | Remove Element</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    function addLang(langName) {
+        const li = document.createElement('li') // naya element banaya 
+        li.innerHTML = `${langName}` // aane wala language ke naame ko list mein add kara internallyO(memeory)
+        document.querySelector('.language').appendChild(li) // change ko memory se code mein append kara
+ 
+    }
+
+    addLang("Python")
+
+    function addOptiLang(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName)) // createTextNode -> optimal way to add element  
+        document.querySelector('.language').appendChild(li)
+        
+    }
+
+    addOptiLang("Web Development")
+    addOptiLang("C++")
+
+    console.log("-----Edit-----");
+
+    const secondLanguage = document.querySelector('li:nth-child(2)')
+    // secondLanguage.innerHTML = "Badal Diya"
+    const newLi = document.createElement('li')
+    newLi.textContent = "Aache Se Badal Diya"
+    secondLanguage.replaceWith(newLi)
+
+    const firstLanguage = document.querySelector('li:first-child')
+    firstLanguage.outerHTML = "<li>Firse Badal Diya</li>" // another method 
+
+    console.log("-----Remove-----");
+
+    const lastLanguage = document.querySelector('li:last-child')
+    lastLanguage.remove() // c++ removed (you can check uncommentinng this line)
+    
+</script>
+</html>
