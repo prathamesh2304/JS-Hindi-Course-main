@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Element</title>
+</head>
+<body style="background-color: black;color: white;">
+    
+</body>
+<script>
+    const creatingDiv = document.createElement('div')
+    console.log(creatingDiv); // <div></div>
+    
+    creatingDiv.className = "main"// <div class="main"></div>
+    creatingDiv.id = Math.round(Math.random()*10 + 1) // div class="main" id ="3"></div>
+    creatingDiv.setAttribute("title","bangaya")// <div class="main" id="7" title="bangaya"></div>
+    creatingDiv.style.backgroundColor = 'orange'
+    creatingDiv.style.padding = '15px'
+    creatingDiv.style.borderRadius = '15px'
+
+    // creatingDiv.innerText = "Elemenet Created"
+
+    const newTextNode = document.createTextNode("Element Created Using Text Node")
+    creatingDiv.appendChild(newTextNode)
+
+    document.body.appendChild(creatingDiv)
+
+</script>
+</html>
