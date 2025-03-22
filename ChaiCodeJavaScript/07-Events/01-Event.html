@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <!-- <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" onclick = "alert('Owl')"></li> NOT A GOOD WAY -->
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    /* console.log('------This is also a not good way------------');
+    
+    // document.getElementById('owl').onclick = function (){
+    //     alert('you clicked owl') }
+    console.log('------Check this out also HOMEWORK-----------');
+    // attachEvent 
+    // jQuery - on
+
+    // type, timeStamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, KeyCode
+
+    document.getElementById('images').addEventListener('click',function(e){
+        // alert('You Again Click Owl')
+        // console.log(e);
+        console.log('You clicked inside the ul')
+        
+    },false)
+    document.getElementById('owl').addEventListener('click',function(e){
+        // alert('You Again Click Owl')
+        // console.log(e);
+        console.log('You clicked owl')
+        e.stopPropagation(); // now this will not displayed "You clicked inside the ul"
+    },false)
+    // when we click on owl -> 
+    // You clicked owl
+    // You clicked inside the ul
+    // when we click other list images -> 
+    // You clicked inside the ul
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log('You clicked on google')
+        e.preventDefault(); // it will prevent default action of link such as when i click on this it will redirect to google
+    },false) */
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e); // pointerEvent Milta
+        console.log(e.target); // isse html ki element milta jispeh click karege <img width="200px" id="river" src="https://images" alt="">
+        console.log(e.target.parentNode); // isse element node milta yeh <li></li>
+        console.log(e.target.tagName); // IMG A
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+    },false)
+</script>
+    
+</html>
