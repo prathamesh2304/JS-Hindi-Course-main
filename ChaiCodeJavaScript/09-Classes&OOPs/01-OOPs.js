@@ -14,6 +14,7 @@ const user = {
             loginCount: 8,
             signedIn: true,
             getUserDetails: [Function: getUserDetails]
+            rttyyr
             }
         */
         
