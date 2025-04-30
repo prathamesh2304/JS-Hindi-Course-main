@@ -8,7 +8,7 @@ class User {
         
     }
 
-    // static used for this methos those who we want to don't have accese to user in some cases like below
+    // static used for this methods those who we want to don't have accese to user in some cases like below
     static createId(){
         return '9843985'
     }
@@ -22,7 +22,7 @@ const user = new User("Prathamesh")
 
 class Teacher extends User{
     constructor(username,email){
-        super(username)
+        super(username) // super is used to call the constructor of parent class 
         this.email = email;
     }
 }
