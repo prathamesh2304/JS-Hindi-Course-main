@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexicalScoping-Closure</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="red">Red</button>
+</body>
+    <script>
+
+        function outer(){
+            let username = "hitesh";
+                function inner(){
+                    let secret = "my123"
+                    console.log("INNER", username);
+                    // Papa Se mag sakta or papa ki cheeze dono bhai use kar sakte
+                }
+
+                function inner2(){
+                    // console.log(secret) // Bhai bhai mein no sharing
+                    console.log("INNNER 2", username);
+                    
+                }
+                inner();
+                inner2();
+        }
+        outer();
+        // console.log("OUTER",username); // not accesisable out of the function
+        
+    </script>
+
+    <script>
+        document.getElementById('orange').onclick = function(){
+            document.body.style.backgroundColor = 'orange'
+        }
+        document.getElementById('red').onclick = function(){
+            document.body.style.backgroundColor = 'red'
+        }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+            
+            return function (){
+                document.body.style.backgroundColor = `${color}`
+            }
+
+        }
+    
+        document.getElementById('orange').onclick = clickHandler('orange')
+    
+
+    </script>
+</html>
